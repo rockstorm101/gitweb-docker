@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -ex
+set -e
 
 # Get OpenRC ready to run
 # See: https://github.com/gliderlabs/docker-alpine/issues/437#issuecomment-667456518
