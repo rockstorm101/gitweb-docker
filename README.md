@@ -1,7 +1,7 @@
 # GitWeb Docker Image
 
 Simple Docker image containing an Nginx webserver to visualize git
-repositories and provide *read-only* access to them.
+repositories and provide *read-only* access to them over HTTP.
 
 ## Basic Use Case
 
