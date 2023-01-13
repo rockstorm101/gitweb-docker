@@ -1,19 +1,15 @@
 # GitWeb Docker Image
-[![Test Build Status][1]][2]
-[![Docker Image Size][3]][2]
-[![Docker Pulls][4]][2]
+[![Test Build Status][b1]][bl]
+[![Docker Image Size][b2]][bl]
+[![Docker Pulls][b3]][bl]
 
 Lightweight Docker image containing an Nginx webserver to visualize
-git repositories (through [GitWeb][5]) and provide *read-only* access
+git repositories (through [GitWeb][1]) and provide *read-only* access
 to them over HTTP.
 
 Image source at: https://github.com/rockstorm101/gitweb-docker
 
-[1]: https://img.shields.io/github/actions/workflow/status/rockstorm101/gitweb-docker/test-build.yml?branch=master
-[2]: https://hub.docker.com/r/rockstorm/gitweb
-[3]: https://img.shields.io/docker/image-size/rockstorm/gitweb/latest
-[4]: https://img.shields.io/docker/pulls/rockstorm/gitweb
-[5]: https://git-scm.com/book/en/v2/Git-on-the-Server-GitWeb
+[1]: https://git-scm.com/book/en/v2/Git-on-the-Server-GitWeb
 
 
 ## Basic Use Case
@@ -34,7 +30,7 @@ git clone http://localhost/your-repo.git
 ## Customization
 
 The provided `nginx.conf` and `gitweb.conf` files are the default
-configurations for the Nginx webserver and [GitWeb][5] (the
+configurations for the Nginx webserver and [GitWeb][1] (the
 repository visualizer) respectively. To override them just mount your
 custom files at:
 
@@ -47,10 +43,16 @@ services:
       - ./gitweb.conf:/etc/gitweb.conf:ro
 ```
 
+By default, a very basic configuration of Nginx is provided. For more
+advanced configuration options please consult the official Nginx
+[documentation][2].
+
+[2]: https://www.nginx.com/resources/admin-guide
+
 
 ### Apply a Theme
 
-To apply a theme to GitWeb like Stefan's [gitweb-theme][6]:
+To apply a theme to GitWeb like Stefan's [gitweb-theme][3]:
 
  1. Mount the theme files somewhere:
 
@@ -70,12 +72,12 @@ To apply a theme to GitWeb like Stefan's [gitweb-theme][6]:
     our $favicon = "theme/git-favicon.png";
     ```
  
-[6]: https://github.com/kogakure/gitweb-theme
+[3]: https://github.com/kogakure/gitweb-theme
 
 
 ## License
 
-View [license information][7] for the software contained in this
+View [license information][4] for the software contained in this
 image.
 
 As with all Docker images, these likely also contain other software
@@ -87,12 +89,18 @@ As for any pre-built image usage, it is the image user's
 responsibility to ensure that any use of this image complies with any
 relevant licenses for all software contained within.
 
-[7]: https://github.com/rockstorm101/gitweb-docker/blob/master/LICENSE
+[4]: https://github.com/rockstorm101/gitweb-docker/blob/master/LICENSE
 
 
 ## Credits
 
-This image is heavily inspired by Kostya's [gitweb-readonly][8] but
+This image is heavily inspired by Kostya's [gitweb-readonly][5] but
 simpler and lighter.
 
-[8]: https://github.com/KostyaEsmukov/docker-gitweb-readonly
+[5]: https://github.com/KostyaEsmukov/docker-gitweb-readonly
+
+
+[b1]: https://img.shields.io/github/actions/workflow/status/rockstorm101/gitweb-docker/test-build.yml?branch=master
+[bl]: https://hub.docker.com/r/rockstorm/gitweb
+[b2]: https://img.shields.io/docker/image-size/rockstorm/gitweb/latest
+[b3]: https://img.shields.io/docker/pulls/rockstorm/gitweb
