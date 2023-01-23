@@ -1,7 +1,6 @@
 # GitWeb Docker Image
 [![Test Build Status][b1]][bl]
 [![Docker Image Size][b2]][bl]
-[![Docker Pulls][b3]][bl]
 
 Lightweight Docker image containing an Nginx webserver to visualize
 git repositories (through [GitWeb][1]) and provide *read-only* access
@@ -113,10 +112,12 @@ relevant licenses for all software contained within.
 This image is heavily inspired by Kostya's [gitweb-readonly][5] but
 simpler and lighter.
 
+GitWeb configuration hints thanks to [Arch's Wiki][6].
+
 [5]: https://github.com/KostyaEsmukov/docker-gitweb-readonly
+[6]: https://wiki.archlinux.org/title/gitweb#Nginx
 
 
 [b1]: https://img.shields.io/github/actions/workflow/status/rockstorm101/gitweb-docker/test-build.yml?branch=master
 [bl]: https://hub.docker.com/r/rockstorm/gitweb
-[b2]: https://img.shields.io/docker/image-size/rockstorm/gitweb/latest
-[b3]: https://img.shields.io/docker/pulls/rockstorm/gitweb
+[b2]: https://img.shields.io/docker/image-size/rockstorm/gitweb/latest?logo=docker
