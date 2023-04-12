@@ -1,4 +1,4 @@
-FROM nginx:1.22.1-alpine
+FROM nginx:1.24.0-alpine
 
 # Install GitWeb and dependencies
 ENV GITS_VERSION=2.38.4-r1
