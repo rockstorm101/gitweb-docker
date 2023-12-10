@@ -6,11 +6,11 @@ RUN set -ex; \
     apk add --no-cache \
         fcgiwrap \
         fcgiwrap-openrc \
-	    git-gitweb=${GITS_VERSION} \
+        git-gitweb=${GITS_VERSION} \
         git-daemon=${GITS_VERSION} \
         openrc \
         perl-cgi \
-	;
+    ;
 
 # Install fcgiwrap start script on Nginx's docker-entrypoint
 ENV FCGIWRAP_BIN=50-start-fcgiwrap.sh \
