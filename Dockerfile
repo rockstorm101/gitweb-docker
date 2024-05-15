@@ -1,7 +1,7 @@
-FROM nginx:1.24.0-alpine
+FROM nginx:1.26.0-alpine
 
 # Install GitWeb and dependencies
-ENV GITS_VERSION=2.38.5-r0
+ENV GITS_VERSION=2.43.4-r0
 RUN set -ex; \
     apk add --no-cache \
         fcgiwrap \
