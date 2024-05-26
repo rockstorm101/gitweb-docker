@@ -17,4 +17,4 @@ adduser nginx www-data
 sed -i 's/args="-c/args="-f -c/' /etc/init.d/fcgiwrap
 
 # Spawn FastCGI process
-rc-service fcgiwrap start
+rc-service fcgiwrap restart
