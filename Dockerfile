@@ -24,3 +24,6 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Configure GitWeb
 COPY gitweb.conf /etc/gitweb.conf
+
+# Configure Git to avoid ownership errors
+RUN set -eux; git config --system --add safe.directory '/srv/git/*'
